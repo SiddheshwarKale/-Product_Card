@@ -114,5 +114,35 @@
 
       <br />
     </div>
+    <script>
+      const decrese = document.querySelector(".btn-decrese");
+      const increse = document.querySelector(".btn-increse");
+      const number = document.querySelector(".product-num");
+      const add = document.querySelector(".add");
+
+      let Num = 1;
+
+      increse.addEventListener("click", function () {
+        if (Num < 10) {
+          Num++;
+          number.textContent = `${Num}`;
+        } else {
+          alert("Only Add 10 Products At A Time");
+        }
+      });
+
+      decrese.addEventListener("click", function () {
+        if (Num > 1) {
+          Num--;
+          number.textContent = `${Num}`;
+        } else {
+          alert("At Least Add 1 Product");
+        }
+      });
+
+      add.addEventListener("click", function () {
+        alert("Successfully Add To Card");
+      });
+    </script>
   </body>
 </html>
